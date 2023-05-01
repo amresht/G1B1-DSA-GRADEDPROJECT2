@@ -6,6 +6,7 @@
  */
 package app;
 
+import java.util.Arrays;
 import java.util.Scanner;
 import lib.Floor;
 
@@ -36,12 +37,14 @@ public class DriverMain {
 				i--;
 			} else if (size > totalfloor) {
 
-				System.out.println("Floor size cannot be greater than totalfloor");
+				System.out.println("Floor size cannot be greater than total floor");
 				i--;
 			} else {
 				floorSizes[i] = size;
 			}
 		}
+		
+		System.out.println(Arrays.toString(floorSizes));
 		Floor SkyscraperConstruction = new Floor();
 
 		SkyscraperConstruction.constructFloor(totalfloor, floorSizes);
